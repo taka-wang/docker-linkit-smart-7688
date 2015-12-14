@@ -22,7 +22,9 @@ WORKDIR /
 RUN git clone git://git.openwrt.org/15.05/openwrt.git
 WORKDIR /openwrt
 RUN cp feeds.conf.default feeds.conf && echo src-git linkit https://github.com/MediaTek-Labs/linkit-smart-7688-feed.git >> feeds.conf
-#RUN ./scripts/feeds update && ./scripts/feeds install -a
+RUN wget https://gist.githubusercontent.com/taka-wang/dee605a8420eebf94fe8/raw/15b15ed14ddef27bd73f9396e53dcadae07fcbc4/.config
+RUN ./scripts/feeds update && ./scripts/feeds install -a
+RUN make download
 #RUN make menuconfig
 #RUN make V=99
 #RUN make -j 2 V=99
