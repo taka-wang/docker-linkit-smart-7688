@@ -1,0 +1,12 @@
+sudo: required
+
+language: c
+
+services:
+    - docker
+
+script:
+    - docker build --rm -t linkit-smart .
+    #- docker run -it linkit-smart /bin/bash -c "make V=99"
+notifications:
+    email: false

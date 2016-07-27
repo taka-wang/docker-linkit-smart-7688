@@ -1,6 +1,8 @@
 Dockerized Toolchain for Linkit Smart 7688
 ===
 
+[![Build Status](https://travis-ci.org/taka-wang/docker-linkit-smart-7688.svg?branch=master)](https://travis-ci.org/taka-wang/docker-linkit-smart-7688)
+
 Build the based docker image
 ---
 You may change the image name as you like.
@@ -13,7 +15,9 @@ Building an OpenWRT firmware
 ---
 Notice for the menuconfig step, please select the following options to set target profile per below: 
 
-- Target System: Ralink RT288x/RT3xxx- Subtarget: MT7688 based boards- Target Profile: LinkIt 7688
+- Target System: Ralink RT288x/RT3xxx
+- Subtarget: MT7688 based boards
+- Target Profile: LinkIt 7688
 
 ```
 docker run -it linkit-smart /bin/bash
